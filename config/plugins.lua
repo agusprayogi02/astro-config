@@ -125,6 +125,16 @@ local m = {
         "nvim-lua/plenary.nvim",
         "nvim-telescope/telescope.nvim"
       },
+    },
+    ["github/copilot.vim"] = {},
+    ["dart-lang/dart-vim-plugin"] = {},
+    ["natebosch/vim-lsc"] = {},
+    ["natebosch/vim-lsc-dart"] = {},
+    ["thosakwe/vim-flutter"] = {},
+    ['natebosch/dartlang-snippets'] = {},
+    ['akinsho/flutter-tools.nvim'] = {
+      requires = { 'nvim-lua/plenary.nvim' },
+      config = function() require "user.config.flutter_tools" end
     }
   },
   ["cmp"] = function() require "user.config.cmp" end,

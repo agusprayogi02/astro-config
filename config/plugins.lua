@@ -118,6 +118,14 @@ local m = {
       end,
     },
     ["mfussenegger/nvim-jdtls"] = { module = "jdtls" }, -- load jdtls on module
+    ["jackMort/ChatGPT.nvim"] = {
+      config = function() require "user.config.chatgpt" end,
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim"
+      },
+    }
   },
   ["cmp"] = function() require "user.config.cmp" end,
   -- ["nvim-web-devicons"] = function() require "user.config.webdevicons" end,

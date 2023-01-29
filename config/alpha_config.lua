@@ -1,18 +1,28 @@
 local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
-  return
-end
+if not status_ok then return end
 
-local dashboard = require("alpha.themes.dashboard")
+local dashboard = require "alpha.themes.dashboard"
 dashboard.section.header.val = {
-  [[             _       _                    _      ]],
-  [[            (_)     | |                  | |     ]],
-  [[ _ __   ___  _  ___ | | __   ___ ___   __| | ___ ]],
-  [[| '_ \ / _ \| |/ _ \| |/ /  / __/ _ \ / _` |/ _ \]],
-  [[| |_) | (_) | | (_) |   <  | (_| (_) | (_| |  __/]],
-  [[| .__/ \___/| |\___/|_|\_\  \___\___/ \__,_|\___|]],
-  [[| |        _/ |                                  ]],
-  [[|_|       |__/                                   ]],
+  [[              ▄▄▄▄▄▄▄▄▄            ]],
+  [[           ▄█████████████▄          ]],
+  [[   █████  █████████████████  █████  ]],
+  [[   ▐████▌ ▀███▄       ▄███▀ ▐████▌  ]],
+  [[    █████▄  ▀███▄   ▄███▀  ▄█████    ]],
+  [[    ▐██▀███▄  ▀███▄███▀  ▄███▀██▌    ]],
+  [[     ███▄▀███▄  ▀███▀  ▄███▀▄███    ]],
+  [[     ▐█▄▀█▄▀███ ▄ ▀ ▄ ███▀▄█▀▄█▌    ]],
+  [[      ███▄▀█▄██ ██▄██ ██▄█▀▄███      ]],
+  [[       ▀███▄▀██ █████ ██▀▄███▀      ]],
+  [[      █▄ ▀█████ █████ █████▀ ▄█      ]],
+  [[      ███        ███        ███      ]],
+  [[      ███▄    ▄█ ███ █▄    ▄███      ]],
+  [[      █████ ▄███ ███ ███▄ █████      ]],
+  [[      █████ ████ ███ ████ █████      ]],
+  [[      █████ ████▄▄▄▄▄████ █████      ]],
+  [[       ▀███ █████████████ ███▀      ]],
+  [[         ▀█ ███ ▄▄▄▄▄ ███ █▀        ]],
+  [[            ▀█▌▐█████▌▐█▀            ]],
+  [[               ███████              ]],
 }
 dashboard.section.buttons.val = {
   dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -30,7 +40,7 @@ local function footer()
   -- local fortune = handle:read("*a")
   -- handle:close()
   -- return fortune
-  return "Pojok Code"
+  return "Agus Prayogi"
 end
 
 dashboard.section.footer.val = footer()
@@ -51,9 +61,7 @@ vim.api.nvim_create_autocmd("FileType", {
     local old_laststatus = vim.opt.laststatus
     vim.api.nvim_create_autocmd("BufUnload", {
       buffer = 0,
-      callback = function()
-        vim.opt.laststatus = old_laststatus
-      end,
+      callback = function() vim.opt.laststatus = old_laststatus end,
     })
     vim.opt.laststatus = 0
   end,

@@ -123,7 +123,7 @@ local m = {
       requires = {
         "MunifTanjim/nui.nvim",
         "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope.nvim"
+        "nvim-telescope/telescope.nvim",
       },
     },
     ["github/copilot.vim"] = {},
@@ -131,11 +131,11 @@ local m = {
     ["natebosch/vim-lsc"] = {},
     ["natebosch/vim-lsc-dart"] = {},
     ["thosakwe/vim-flutter"] = {},
-    ['natebosch/dartlang-snippets'] = {},
-    ['akinsho/flutter-tools.nvim'] = {
-      requires = { 'nvim-lua/plenary.nvim' },
-      config = function() require "user.config.flutter_tools" end
-    }
+    ["natebosch/dartlang-snippets"] = {},
+    ["akinsho/flutter-tools.nvim"] = {
+      requires = { "nvim-lua/plenary.nvim" },
+      config = function() require "user.config.flutter_tools" end,
+    },
   },
   ["cmp"] = function() require "user.config.cmp" end,
   -- ["nvim-web-devicons"] = function() require "user.config.webdevicons" end,

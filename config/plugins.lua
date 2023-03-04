@@ -138,6 +138,10 @@ local m = {
       },
     },
     ["github/copilot.vim"] = {},
+    -- Custom plugins with agus
+    -- ["neoclide/coc.nvim"] = {
+    --   branch = 'release'
+    -- },
     ["dart-lang/dart-vim-plugin"] = {},
     ["natebosch/vim-lsc"] = {},
     ["natebosch/vim-lsc-dart"] = {},

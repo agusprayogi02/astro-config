@@ -48,6 +48,10 @@ local m = {
     ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
     ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
     ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+    ["<leader>."] = { "<Cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Quick Actions" },
+    ['<leader>..'] = { "<Cmd>lua vim.lsp.buf.range_code_action()<CR>", desc = "Range C Action" },
+    ['<leader>bd'] = { "<Cmd>lua vim.lsp.buf.definition()<CR>", desc = "Jump definition" },
+    ['<leader>bk'] = { "<Cmd>lua vim.lsp.buf.hover()<CR>", desc = "Show Hover" }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
